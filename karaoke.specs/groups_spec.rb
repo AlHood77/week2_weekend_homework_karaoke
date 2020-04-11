@@ -39,10 +39,20 @@ class TestGroups < MiniTest::Test
             assert_equal(@people, name_list)
         end
 
+        def test_number_of_people_in_group
+            group_size = @group1.people()
+            assert_equal(4, group_size.count)
+        end
+
+        # def test_total_money_in_group
+        #     total_cash = @group1.total_money
+        #     assert_equal(65, total_cash)
+        # end
+
         def test_find_favourite_song()
             song = @group1.find_song("Wonderwall")
             assert_equal("Wonderwall", song[:favourite_song])
-          end
+        end
 
 end
 

@@ -10,7 +10,8 @@ require_relative( '../groups')
 class TestRooms < MiniTest::Test
 
     def setup()
-        @room = Rooms.new(1, 40)
+        @room = Rooms.new(1, 40, 6)
+        @room2 = Rooms.new(2, 100, 5)
         song_list1 = ["Sweet Caroline", "Wonderwall", "Losing my Religion", "My Way"]
         @playlist = Playlist.new("Rock", song_list1)
         @people2 = [
@@ -33,6 +34,16 @@ class TestRooms < MiniTest::Test
             name: "Paul",
             monies: 15,
             favourite_song: "My Way"
+            },
+            {
+            name: "Brian",
+            monies: 10,
+            favourite_song: "Suspicious Minds"
+            },
+            {
+            name: "Hazel",
+            monies: 15,
+            favourite_song: "Don't Stop Believin"
             }
         ]
     
@@ -88,6 +99,10 @@ class TestRooms < MiniTest::Test
             @room.clear_playlist()
             assert_equal(0, @room.room_playlist)
         end
+
+        
+
+
 
 
 

@@ -6,6 +6,9 @@ class Groups
         @people = people || []
     end
 
+ 
+
+
     def find_song(song_name)
         find_song = nil
         for song in @people
@@ -14,7 +17,9 @@ class Groups
           end
         end
         return find_song
-      end
+    end
+
+
 
 
 end
