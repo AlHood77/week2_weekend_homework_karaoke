@@ -5,7 +5,7 @@ class Rooms
     def initialize (room_number, cost_of_entry)
         @room_number = room_number
         @cost_of_entry = cost_of_entry
-        @karaoke_playlist = []
+        @karaoke_machine_playlist = []
         @room = []
     end
 
@@ -21,8 +21,8 @@ class Rooms
         @room << group
     end
 
-    def check_out(group)
-        @room.pop(group)
+    def check_out()
+        @room.clear
     end
 
 

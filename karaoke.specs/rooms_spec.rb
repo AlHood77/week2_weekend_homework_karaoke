@@ -55,10 +55,6 @@ class TestRooms < MiniTest::Test
             assert_equal(0, @room.karaoke_room_occupied())
         end
 
-        def test_playlist_is_empty()
-            assert_equal(0, @room.room_playlist())
-        end
-
         def test_check_in_group_to_room()
             @room.check_in(@group2)
             assert_equal(1, @room.karaoke_room_occupied())
@@ -66,8 +62,12 @@ class TestRooms < MiniTest::Test
 
         def test_check_group_out_of_room()
             @room.check_in(@group2)
-            @room.check_out(@group2)
+            @room.check_out()
             assert_equal(0, @room.karaoke_room_occupied())
+        end
+
+        def test_playlist_is_empty()
+            assert_equal(0, @room.room_playlist())
         end
 
 
