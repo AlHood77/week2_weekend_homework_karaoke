@@ -13,16 +13,20 @@ class Rooms
         return @room.size()
     end
 
-    def room_playlist
-        return @karaoke_playlist.length()
-    end
-
     def check_in(group)
         @room << group
     end
 
     def check_out()
         @room.clear
+    end
+
+    def room_playlist
+        return @karaoke_machine_playlist.size()
+    end
+
+    def add_playlist(playlist)
+        @karaoke_machine_playlist << playlist
     end
 
 
