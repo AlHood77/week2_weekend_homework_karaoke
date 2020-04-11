@@ -29,5 +29,9 @@ class Rooms
         @karaoke_machine_playlist << playlist
     end
 
+    def clear_playlist()
+        @karaoke_machine_playlist.clear
+    end
+
 
 end

@@ -82,6 +82,13 @@ class TestRooms < MiniTest::Test
             assert_equal(1, @room.room_playlist())
         end
 
+        #testing that playlist can be cleared
+        def test_clear_playlist_from_karaoke_machine
+            @room.add_playlist(@playlist)
+            @room.clear_playlist()
+            assert_equal(0, @room.room_playlist)
+        end
+
 
 
 
