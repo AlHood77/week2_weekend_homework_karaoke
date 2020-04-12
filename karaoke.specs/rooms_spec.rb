@@ -100,7 +100,23 @@ class TestRooms < MiniTest::Test
             assert_equal(0, @room.room_playlist)
         end
 
-        
+        #Get number of people in a group
+        def test_number_of_people_in_group
+            group_size = @group2.people() #speak to instructor about output
+            assert_equal(6, group_size.count)
+        end
+
+        #Get capacity of room
+        def test_capacity_of_karaoke_room
+            assert_equal(6, @room.capacity)
+        end
+
+        #Check room is big enough for group
+        def test_check_room_is_big_enough
+            group_size = @group2.people() 
+            @room.room_big_enough(group_size, @room.capacity)
+            assert_equal(true, result)
+        end
 
 
 

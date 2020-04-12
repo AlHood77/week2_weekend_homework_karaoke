@@ -6,7 +6,18 @@ class Groups
         @people = people || []
     end
 
- 
+    # def total_money_in_group(group)
+    #     total_money = 0
+    #     for money in group
+    #       total_money += money[:monies]
+    #     end
+    #     return total_money
+    # end
+
+    # def total_money_in_group(group)
+    #     p group.reduce(0) {|total, money| total + money[:monies]}
+    # end
+
 
 
     def find_song(song_name)
@@ -16,7 +27,7 @@ class Groups
             find_song = song
           end
         end
-        return find_song
+        p find_song
     end
 
 

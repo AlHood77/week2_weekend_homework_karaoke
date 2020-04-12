@@ -44,9 +44,10 @@ class TestGroups < MiniTest::Test
             assert_equal(4, group_size.count)
         end
 
+        #Can't get total money in group to work
+
         # def test_total_money_in_group
-        #     total_cash = @group1.total_money
-        #     assert_equal(65, total_cash)
+        #     assert_equal(65, total_money_in_group(@group1))
         # end
 
         def test_find_favourite_song()

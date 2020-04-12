@@ -34,5 +34,14 @@ class Rooms
         @karaoke_machine_playlist.clear
     end
 
+    #Doesn't work (Don't think test has been written correctly)
+    def room_big_enough(group_size, room_capcity)
+        if group_size <= room_capcity
+        return true
+        else
+        return false
+        end
+    end
+
 
 end
